@@ -1,6 +1,6 @@
 
 var score,activePlayer,previous,playing,dice,win;
-
+var nw=[0,0];
 init();
 document.querySelector('.rolldice').addEventListener('click',function(){
     if(playing===1){
@@ -9,7 +9,7 @@ document.querySelector('.rolldice').addEventListener('click',function(){
     diceDOM.style.display='block';
     var dicePicDOM=document.querySelector('.dicepic');
     dicePicDOM.src='dice-' + dice + '.png';
-    var nw=[0,0];
+     nw=[0,0];
     
         nw[activePlayer]=previous[activePlayer]+dice;
         if(nw[activePlayer]===16){
